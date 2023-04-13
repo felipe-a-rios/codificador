@@ -33,7 +33,7 @@
       }
 
       function decodificar() {
-        var entrada = document.getElementById("saida").innerHTML;
+        var entrada = document.getElementById("entrada").value;
         var saida = "";
         for (var i = 0; i < entrada.length; i++) {
           var letra = entrada[i];
@@ -56,8 +56,7 @@
             saida += letra;
           }
         }
-        document.getElementById("entrada").value = saida;
-        document.getElementById("saida").innerHTML = "";
+        document.getElementById("saida").innerHTML = saida;
       }
     </script>
   </head>

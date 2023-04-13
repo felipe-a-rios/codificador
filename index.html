@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codificador de Palavras</title>
+    <meta charset="utf-8" />
+    <script>
+      function validarEntrada() {
+        var entrada = document.getElementById("entrada").value;
+        entrada = entrada.toLowerCase().replace(/[^a-z]/g, "");
+        document.getElementById("entrada").value = entrada;
+      }
+
+      function codificar() {
+        var entrada = document.getElementById("entrada").value;
+        var saida = "";
+        for (var i = 0; i < entrada.length; i++) {
+          var letra = entrada[i];
+          if (letra == "e") {
+            saida += "enter";
+          } else if (letra == "i") {
+            saida += "imes";
+          } else if (letra == "a") {
+            saida += "ai";
+          } else if (letra == "o") {
+            saida += "ober";
+          } else if (letra == "u") {
+            saida += "ufat";
+          } else {
+            saida += letra;
+          }
+        }
+        document.getElementById("saida").innerHTML = saida;
+      }
+
+      function decodificar() {
+        var entrada = document.getElementById("saida").innerHTML;
+        var saida = "";
+        for (var i = 0; i < entrada.length; i++) {
+          var letra = entrada[i];
+          if (letra == "e" && entrada.slice(i, i + 5) == "enter") {
+            saida += "e";
+            i += 4;
+          } else if (letra == "i" && entrada.slice(i, i + 4) == "imes") {
+            saida += "i";
+            i += 3;
+          } else if (letra == "a" && entrada.slice(i, i + 2) == "ai") {
+            saida += "a";
+            i += 1;
+          } else if (letra == "o" && entrada.slice(i, i + 4) == "ober") {
+            saida += "o";
+            i += 3;
+          } else if (letra == "u" && entrada.slice(i, i + 4) == "ufat") {
+            saida += "u";
+            i += 3;
+          } else {
+            saida += letra;
+          }
+        }
+        document.getElementById("entrada").value = saida;
+        document.getElementById("saida").innerHTML = "";
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="entrada">Digite a palavra:</label>
+      <input type="text" id="entrada" oninput="validarEntrada()" />
+      <br />
+      <button type="button" onclick="codificar()">Codificar</button>
+      <button type="button" onclick="decodificar()">Decodificar</button>
+    </form>
+    <br />
+    <div id="saida"></div>
+  </body>
+</html>

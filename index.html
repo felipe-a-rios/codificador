@@ -58,6 +58,15 @@
         }
         document.getElementById("saida").innerHTML = saida;
       }
+      function copiarSaida() {
+        var saida = document.getElementById("saida").innerHTML;
+        if (saida) {
+          navigator.clipboard.writeText(saida);
+          alert("Saída copiada para a área de transferência!");
+        } else {
+          alert("Não há nada para copiar.");
+        }
+      }
     </script>
   </head>
   <body>
@@ -67,6 +76,7 @@
       <br />
       <button type="button" onclick="codificar()">Codificar</button>
       <button type="button" onclick="decodificar()">Decodificar</button>
+      <button type="button" onclick="copiarSaida()">Copiar Saída</button>
     </form>
     <br />
     <div id="saida"></div>

@@ -1,0 +1,232 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Inter, "sans-serif";
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  background-color: transparent;
+  border: none;
+
+  font: inherit;
+  cursor: pointer;
+
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.75rem;
+}
+input {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  outline: none;
+}
+.border {
+  border: 1px solid #0a3871;
+  border-radius: 1.5rem;
+}
+
+// text color classes
+
+.dark-text-100 {
+  color: #609ed4;
+}
+
+.dark-text-200 {
+  color: #356ea9;
+}
+
+.dark-text-300 {
+  color: #0a3871;
+}
+
+.dark-text-400 {
+  color: #072b61;
+}
+
+.dark-text-500 {
+  color: #052051;
+}
+
+.gray-text-100 {
+  color: #ced4da;
+}
+.gray-text-200 {
+  color: #adb5bd;
+}
+.gray-text-300 {
+  color: #868e96;
+}
+.gray-text-400 {
+  color: #495057;
+}
+.gray-text-500 {
+  color: #343a40;
+}
+.light-text-100 {
+  color: #f3f5fc;
+}
+
+.light-text-200 {
+  color: #eff1fa;
+}
+
+.light-text-300 {
+  color: #e9ecf8;
+}
+
+.light-text-400 {
+  color: #aab2d5;
+}
+
+.light-text-500 {
+  color: #757fb2;
+}
+.white-text {
+  color: #ffffff;
+}
+
+//background classes
+
+.dark-bg-100 {
+  background-color: #609ed4;
+}
+
+.dark-bg-200 {
+  background-color: #356ea9;
+}
+
+.dark-bg-300 {
+  background-color: #0a3871;
+}
+
+.dark-bg-400 {
+  background-color: #072b61;
+}
+
+.dark-bg-500 {
+  background-color: #052051;
+}
+
+.gray-bg-100 {
+  background-color: #ced4da;
+}
+.gray-bg-200 {
+  background-color: #adb5bd;
+}
+.gray-bg-300 {
+  background-color: #868e96;
+}
+.gray-bg-400 {
+  background-color: #495057;
+}
+.gray-bg-500 {
+  background-color: #343a40;
+}
+.light-bg-100 {
+  background-color: #f3f5fc;
+}
+
+.light-bg-200 {
+  background-color: #eff1fa;
+}
+
+.light-bg-300 {
+  background-color: #e9ecf8;
+}
+
+.light-bg-400 {
+  background-color: #aab2d5;
+}
+
+.light-bg-500 {
+  background-color: #757fb2;
+}
+.white-bg {
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+.body-grid {
+  grid-template-columns: 2fr 1fr;
+}
+nav {
+  margin: 2.5rem 0 0 2.5rem;
+}
+main {
+  margin: 5rem 0 0 25rem;
+}
+footer {
+  margin-top: 22rem;
+}
+.text-lg {
+  font-size: 2rem;
+}
+aside {
+  display: flex;
+  margin-left: 5rem;
+  height: 30rem;
+  width: 20rem;
+  border-radius: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+aside button {
+  align-self: flex-end;
+  margin-bottom: 2.5rem;
+}

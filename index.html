@@ -3,10 +3,17 @@
   <head>
     <title>Codificador de Palavras</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       function validarEntrada() {
         var entrada = document.getElementById("entrada").value;
-        entrada = entrada.toLowerCase().replace(/[^a-z]/g, "");
+        entrada = entrada.toLowerCase().replace(/[^a-z]/g, " ");
         document.getElementById("entrada").value = entrada;
       }
 
@@ -69,16 +76,45 @@
       }
     </script>
   </head>
-  <body>
-    <form>
-      <label for="entrada">Digite a palavra:</label>
-      <input type="text" id="entrada" oninput="validarEntrada()" />
-      <br />
-      <button type="button" onclick="codificar()">Codificar</button>
-      <button type="button" onclick="decodificar()">Decodificar</button>
-      <button type="button" onclick="copiarSaida()">Copiar Saída</button>
-    </form>
-    <br />
-    <div id="saida"></div>
+  <body class="light-bg-100 body-grid">
+    <nav>
+      <ul>
+        <li>
+          <a href="">
+            <img src="assets/Logo.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="flex">
+      <form>
+        <input
+          type="text"
+          id="entrada"
+          oninput="validarEntrada()"
+          placeholder="Digite seu texto"
+          class="dark-text-300 text-lg"
+        />
+
+        <footer>
+          <button
+            class="dark-bg-300 white-text"
+            type="button"
+            onclick="codificar()"
+          >
+            Criptografar
+          </button>
+          <button class="border" type="button" onclick="decodificar()">
+            Descriptografar
+          </button>
+        </footer>
+      </form>
+      <aside class="white-bg flex">
+        <div id="saida"></div>
+        <button class="border" type="button" onclick="copiarSaida()">
+          Copiar
+        </button>
+      </aside>
+    </main>
   </body>
 </html>
